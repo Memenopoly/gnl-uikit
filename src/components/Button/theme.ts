@@ -87,7 +87,7 @@ export const dark: ButtonTheme = {
     ...light.tertiary,
     background: darkColors.tertiary,
     backgroundActive: darkColors.tertiary,
-    backgroundHover: darkColors.tertiary,
+    backgroundHover: darkColors.success,
     color: darkColors.primary,
   },
   [TEXT]: {

@@ -31,7 +31,7 @@ const StyledModal = styled.div`
 const ModalHeader = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e9eaeb;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primaryDark};
   align-items: center;
   padding: 12px 24px;
 `;
@@ -54,14 +54,14 @@ const Modal: React.FC<Props> = ({
       <ModalTitle>
         {onBack && (
           <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
-            <ArrowBackIcon color="primary" />
+            <ArrowBackIcon color="textSubtle" />
           </IconButton>
         )}
-        <Heading>{title}</Heading>
+        <Heading color="tertiary">{title}</Heading>
       </ModalTitle>
       {!hideCloseButton && (
         <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
-          <CloseIcon color="primary" />
+          <CloseIcon color="text" />
         </IconButton>
       )}
     </ModalHeader>

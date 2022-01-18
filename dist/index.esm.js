@@ -1752,7 +1752,10 @@ var StyledModal = styled.div(templateObject_1$g || (templateObject_1$g = __makeT
     var theme = _a.theme;
     return theme.mediaQueries.xs;
 });
-var ModalHeader = styled.div(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"], ["\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"])));
+var ModalHeader = styled.div(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid ", ";\n  align-items: center;\n  padding: 12px 24px;\n"], ["\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid ", ";\n  align-items: center;\n  padding: 12px 24px;\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.primaryDark;
+});
 var ModalTitle = styled(Flex)(templateObject_3$3 || (templateObject_3$3 = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
 var Modal = function (_a) {
     var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b, _c = _a.bodyPadding, bodyPadding = _c === void 0 ? "24px" : _c;
@@ -1760,10 +1763,10 @@ var Modal = function (_a) {
         React.createElement(ModalHeader, null,
             React.createElement(ModalTitle, null,
                 onBack && (React.createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px" },
-                    React.createElement(Icon$1a, { color: "primary" }))),
-                React.createElement(Heading, null, title)),
+                    React.createElement(Icon$1a, { color: "textSubtle" }))),
+                React.createElement(Heading, { color: "tertiary" }, title)),
             !hideCloseButton && (React.createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog" },
-                React.createElement(Icon$X, { color: "primary" })))),
+                React.createElement(Icon$X, { color: "text" })))),
         React.createElement(Flex, { flexDirection: "column", p: bodyPadding }, children)));
 };
 var templateObject_1$g, templateObject_2$6, templateObject_3$3;
@@ -2972,7 +2975,7 @@ var light$5 = (_a = {},
 var dark$5 = (_b = {},
     _b[PRIMARY] = __assign({}, light$5.primary),
     _b[SECONDARY] = __assign({}, light$5.secondary),
-    _b[TERTIARY] = __assign(__assign({}, light$5.tertiary), { background: darkColors.tertiary, backgroundActive: darkColors.tertiary, backgroundHover: darkColors.tertiary, color: darkColors.primary }),
+    _b[TERTIARY] = __assign(__assign({}, light$5.tertiary), { background: darkColors.tertiary, backgroundActive: darkColors.tertiary, backgroundHover: darkColors.success, color: darkColors.primary }),
     _b[TEXT] = __assign(__assign({}, light$5.text), { backgroundHover: darkColors.tertiary }),
     _b[DANGER] = __assign({}, light$5.danger),
     _b[SUBTLE] = __assign({}, light$5.subtle),
