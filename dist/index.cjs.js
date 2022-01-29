@@ -2638,7 +2638,7 @@ var AccountModal = function (_a) {
             React__default["default"].createElement(LinkExternal, { color: "text", small: true, href: "https://bscscan.com/address/".concat(account), mr: "16px" }, "View on BscScan"),
             React__default["default"].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default["default"].createElement(Flex, { justifyContent: "center" },
-            React__default["default"].createElement(Button, { size: "sm", variant: "text", onClick: function () {
+            React__default["default"].createElement(Button, { size: "sm", variant: "tertiary", onClick: function () {
                     logout();
                     window.localStorage.removeItem(localStorageKey);
                     onDismiss();
