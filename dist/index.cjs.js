@@ -1107,7 +1107,7 @@ var LinkExternal = function (_a) {
     var children = _a.children, props = __rest(_a, ["children"]);
     return (React__default["default"].createElement(Link, __assign({ external: true }, props),
         children,
-        React__default["default"].createElement(Icon$O, { color: "primary", ml: "4px" })));
+        React__default["default"].createElement(Icon$O, { color: "text", ml: "4px" })));
 };
 
 var Bar = styled__default["default"].div(templateObject_1$l || (templateObject_1$l = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-color: ", ";\n  border-top-left-radius: 32px;\n  border-bottom-left-radius: 32px;\n  height: 16px;\n  transition: width 200ms ease;\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-color: ", ";\n  border-top-left-radius: 32px;\n  border-bottom-left-radius: 32px;\n  height: 16px;\n  transition: width 200ms ease;\n"])), function (props) { return (props.primary ? props.theme.colors.secondary : "".concat(props.theme.colors.secondary, "80")); });
@@ -2625,7 +2625,7 @@ var CopyToClipboard = function (_a) {
             }
         } }, props),
         children,
-        React__default["default"].createElement(Icon$U, { width: "20px", color: "primary", ml: "4px" }),
+        React__default["default"].createElement(Icon$U, { width: "20px", color: "text", ml: "4px" }),
         React__default["default"].createElement(Tooltip, { isTooltipDisplayed: isTooltipDisplayed }, "Copied")));
 };
 var templateObject_1$5, templateObject_2$2;
@@ -2638,7 +2638,7 @@ var AccountModal = function (_a) {
             React__default["default"].createElement(LinkExternal, { color: "text", small: true, href: "https://bscscan.com/address/".concat(account), mr: "16px" }, "View on BscScan"),
             React__default["default"].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default["default"].createElement(Flex, { justifyContent: "center" },
-            React__default["default"].createElement(Button, { size: "sm", variant: "text", onClick: function () {
+            React__default["default"].createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
                     logout();
                     window.localStorage.removeItem(localStorageKey);
                     onDismiss();
